@@ -19,6 +19,15 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// Health check endpoint
+app.get('/health', (req, res) => {
+  res.status(200).json({ 
+    status: 'ok', 
+    service: 'calendar-backend',
+    timestamp: new Date().toISOString() 
+  });
+});
+
 // API Routes
 app.use('/api/bookings', bookingsRoutes);
 app.use('/api/operating-hours', operatingHoursRoutes);
