@@ -1,0 +1,29 @@
+{
+  "name": "calendar-app-server",
+  "version": "1.0.0",
+  "description": "Server for calendar scheduling application",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "init-db": "echo Run the following command to initialize the database: psql -h 10.0.2.221 -U postgres -d postgres -f ./db/photobooking_schema.sql"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@azure/identity": "^3.4.2",
+    "@microsoft/microsoft-graph-client": "^3.0.7",
+    "axios": "^1.9.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^4.18.2",
+    "isomorphic-fetch": "^3.0.0",
+    "morgan": "^1.10.0",
+    "pg": "^8.15.6",
+    "sqlite3": "^5.1.6"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}

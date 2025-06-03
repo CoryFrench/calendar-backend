@@ -1,0 +1,8 @@
+# Add these settings to your .env file
+
+# SMTP Settings for Email
+SMTP_HOST=smtp.office365.com
+SMTP_PORT=587
+SMTP_SECURE=false
+SMTP_USER=booking@wfpcc.com
+SMTP_PASSWORD=your-email-password 
