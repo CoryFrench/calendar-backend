@@ -11,6 +11,7 @@ const availabilityRoutes = require('./routes/availability');
 const msCalendarRoutes = require('./routes/msCalendar');
 const msAvailabilityRoutes = require('./routes/msAvailability');
 const msBookingsRoutes = require('./routes/msBookings');
+const generalCalendarRoutes = require('./routes/generalCalendar');
 
 // Create Express app
 const app = express();
@@ -43,6 +44,7 @@ app.use('/api/ms-availability', msAvailabilityRoutes);
 
 app.use('/api/ms-calendar', msCalendarRoutes);
 app.use('/api/ms-bookings', msBookingsRoutes);
+app.use('/api/general-calendar', generalCalendarRoutes);
 
 // For production - serve static React app
 if (process.env.NODE_ENV === 'production') {
